@@ -1,4 +1,4 @@
-// var searchInput = document.querySelector("#searchInput");
+var baseUrl = "https://api.weatherapi.com/v1";
 var searchInput = document.querySelector(".main .home .container input");
 var searchBtn = document.querySelector(".main .home .container button");
 var forecast =[];
@@ -8,7 +8,7 @@ var data = [];
 
 async function getWeather(city = "cairo") {
 
-var response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d7bb1f38848f4995a3d100713252106&q=${city}&days=3`);
+var response = await fetch(baseUrl + `/forecast.json?key=d7bb1f38848f4995a3d100713252106&q=${city}&days=3`);
 var data = await response.json();
 
 
