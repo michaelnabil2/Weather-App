@@ -8,7 +8,7 @@ var data = [];
 
 async function getWeather(city = "cairo") {
 
-var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d7bb1f38848f4995a3d100713252106&q=${city}&days=3`);
+var response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d7bb1f38848f4995a3d100713252106&q=${city}&days=3`);
 var data = await response.json();
 
 
